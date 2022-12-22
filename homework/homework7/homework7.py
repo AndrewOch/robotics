@@ -24,9 +24,12 @@ if __name__ == '__main__':
             picCounter += 1
         h0 = h
 
-    f, axarr = plt.subplots(3, 3)
+    gSize = 2
+
+    # show cropped pictures
+    f, axarr = plt.subplots(gSize, gSize)
     for i in range(1, picCounter):
         pic = cv2.imread(f'cropped/city-cropped{i}.jpg')
-        axarr[i // 3 - 1, i % 3 - 1].imshow(cv2.cvtColor(pic, cv2.COLOR_BGR2RGB))
-        axarr[i // 3 - 1, i % 3 - 1].axis('off')
+        axarr[i // gSize - 1, i % gSize - 1].imshow(cv2.cvtColor(pic, cv2.COLOR_BGR2RGB))
+        axarr[i // gSize - 1, i % gSize - 1].axis('off')
     plt.show()
