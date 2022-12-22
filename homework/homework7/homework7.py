@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
     pic = cv2.imread('city-full.jpeg')
-    resizeScale = 0.15
+    resizeScale = 0.85
 
     img = cv2.resize(pic, None, fx=resizeScale, fy=resizeScale, interpolation=cv2.INTER_LINEAR)
 
