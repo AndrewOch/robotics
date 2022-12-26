@@ -39,7 +39,7 @@ if __name__ == '__main__':
                    noised,
                    median_blur(noised, 5),
                    gaussian_blur(noised, 5),
-                   bilateral_filter(noised, 9, 75, 75)
+                   bilateral_filter(noised, 8, 75, 75)
                ), axis=1))
     cv2.waitKey(0)
     cv2.destroyAllWindows()
